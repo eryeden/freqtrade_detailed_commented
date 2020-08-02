@@ -293,7 +293,7 @@ class FreqtradeBot:
                 logger.warning(
                     "Buy Price from orderbook could not be determined."
                     f"Orderbook: {order_book}"
-                 )
+                )
                 raise PricingError from e
             logger.info(f'...top {order_book_top} order book buy rate {rate_from_l2:.8f}')
             used_rate = rate_from_l2

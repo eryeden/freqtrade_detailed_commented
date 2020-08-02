@@ -56,8 +56,11 @@ def init(db_url: str, clean_open_orders: bool = False) -> None:
     # We should use the scoped_session object - not a seperately initialized version
     Trade.session = scoped_session(sessionmaker(bind=engine, autoflush=True, autocommit=True))
     Trade.query = Trade.session.query_property()
+    """
+    ここでTradeのテーブル定義に基づいてDB上にTableが生成されるらしい。Base classを継承しているTable定義クラスを参照して自動で生成されるらしい。
+    """
     _DECL_BASE.metadata.create_all(engine)
-    check_migrate(engine)
+    check_migrate(engine)  # 前回のデータのバックアップをとる？？全然わからん。実際に動かしてみて振る舞いを確認する必要あり。
 
     # Clean dry_run DB if the db is not in-memory
     if clean_open_orders and db_url != 'sqlite://':
@@ -189,11 +192,17 @@ def clean_dry_run_db() -> None:
             trade.open_order_id = None
 
 
-class Trade(_DECL_BASE):
+class Trade(_DECL_BASE):  # sqlalchemyのdeclarative_base()というTable定義用のBaseクラスを継承している。
     """
     Class used to define a trade structure
     """
-    __tablename__ = 'trades'
+
+    """
+    DBのテーブル定義をここでやっている。 ColumnでDBの列を定義する。
+    Columnはsqlalchemyで定義されているMethod。
+    """
+
+    __tablename__ = 'trades'  # Tableの名前を定義する
 
     id = Column(Integer, primary_key=True)
     exchange = Column(String, nullable=False)
@@ -588,7 +597,7 @@ class Trade(_DECL_BASE):
 
             # skip case if trailing-stop changed the stoploss already.
             if (trade.stop_loss == trade.initial_stop_loss
-               and trade.initial_stop_loss_pct != desired_stoploss):
+                    and trade.initial_stop_loss_pct != desired_stoploss):
                 # Stoploss value got changed
 
                 logger.info(f"Stoploss for {trade} needs adjustment...")
