@@ -1,3 +1,6 @@
+# Freqtrade with detailed comments
+
+
 # Freqtrade
 
 [![Freqtrade CI](https://github.com/freqtrade/freqtrade/workflows/Freqtrade%20CI/badge.svg)](https://github.com/freqtrade/freqtrade/actions/)
