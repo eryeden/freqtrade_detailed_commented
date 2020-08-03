@@ -1,7 +1,7 @@
 # Freqtrade with detailed comments
 ![img](comments/images/ATB_flow-Freqtrade.png)
 
-- [Flow diagram](https://www.draw.io/#Heryeden%2Ffreqtrade_detailed_comments%2Fcommented%2FATB_flow.drawio)
+- [Flow diagram](https://www.draw.io/#Heryeden%2Ffreqtrade_detailed_comments%2Fcommented%2Fcomments%2FATB_flow.drawio)
 
 
 # Freqtrade
