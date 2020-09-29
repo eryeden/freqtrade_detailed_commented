@@ -1,6 +1,6 @@
-<mxfile host="www.draw.io" modified="2020-08-02T07:31:29.619Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36" etag="tWiO__SWYlnGhnFsulxq" version="13.5.5" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2020-09-29T15:08:58.566Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36" etag="KIl2MtrhxfSGVkKHwHe7" version="13.7.5" type="github" pages="2">
   <diagram id="s-LWDIpCwLAYnI88xC9E" name="Whole">
-    <mxGraphModel dx="1606" dy="1699" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1099" dy="860" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -35,14 +35,14 @@
     </mxGraphModel>
   </diagram>
   <diagram id="uRmwWOH_s3Uu9mqFdXmV" name="Freqtrade">
-    <mxGraphModel dx="1091" dy="598" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1951" dy="966" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="aCUefI5wwC0o2XipiXim-0" />
         <mxCell id="aCUefI5wwC0o2XipiXim-1" parent="aCUefI5wwC0o2XipiXim-0" />
-        <mxCell id="s_u__JOCzExAqWGaoaYu-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=20;" edge="1" parent="aCUefI5wwC0o2XipiXim-1" source="s_u__JOCzExAqWGaoaYu-51" target="s_u__JOCzExAqWGaoaYu-52">
+        <mxCell id="s_u__JOCzExAqWGaoaYu-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=20;" parent="aCUefI5wwC0o2XipiXim-1" source="s_u__JOCzExAqWGaoaYu-51" target="s_u__JOCzExAqWGaoaYu-52" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="s_u__JOCzExAqWGaoaYu-51" value="Sell lock : &lt;span style=&quot;font-weight: normal&quot;&gt;おそらくSell lockしているときは他のプロセスとかで売れないようになるはず&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1;arcSize=7;" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
+        <mxCell id="s_u__JOCzExAqWGaoaYu-51" value="Sell lock : &lt;span style=&quot;font-weight: normal&quot;&gt;おそらくSell lockしているときは他のプロセスとかで売れないようになるはず&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1;arcSize=7;" parent="aCUefI5wwC0o2XipiXim-1" vertex="1">
           <mxGeometry x="3170" y="995" width="380" height="110" as="geometry" />
         </mxCell>
         <mxCell id="DF0e1LpsZ8X1XGetKPyV-0" value="Treqtrade architecture" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;fontSize=19;" parent="aCUefI5wwC0o2XipiXim-1" vertex="1">
@@ -153,118 +153,172 @@
         <mxCell id="PSf9JsFq92TJlSqg_QDH-15" value="再設定処理：&lt;br&gt;1. cleanup関数&lt;br&gt;2. コンストラクタ" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="aCUefI5wwC0o2XipiXim-1" vertex="1">
           <mxGeometry x="980" y="1760" width="300" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="s_u__JOCzExAqWGaoaYu-0" value="Botクラスメンバ変数：&lt;br&gt;&lt;br&gt;self.state # Botの状態&lt;br&gt;self.config # Botの設定のDict&lt;br&gt;self._sell_rate_cache # 1800sec保持される sell rateのキャッシュ&lt;br&gt;self._buy_rate_cache # 1800sec保持される buy rateのキャッシュ&lt;br&gt;self.strategy # Trade strategyのインスタンス&lt;br&gt;self.exchange # 取引所との通信Bridge、おそらくシミュレーション、DryRunも含む。&lt;br&gt;&lt;br&gt;persistence # 継続中のTradeを記録するSQLDBと通信するインスタンス&lt;br&gt;&lt;br&gt;self.wallets # 通貨、使える額(free)、使った額(used)、全体(total)を保持&lt;br&gt;self.pairlists # Tradeの対象となる通貨ペアのList？&lt;br&gt;self.dataprovider # Botへのデータ入力を行う、Ticker, orderbook, OHLCYデータをFetchする&lt;br&gt;&lt;br&gt;self.edge #&amp;nbsp;Win Rate, Risk Reward Ratio, Expectancyを計算して、StoplossやPositionサイズの調整、Strategyへの情報提供？を行う。&lt;br&gt;self.active_pair_whitelist # pair_listは、静的、動的PairListがある。更新されたPairListがここに入れられる？&lt;br&gt;&lt;br&gt;self.rpc # RPCにてBotに司令を与えるために利用する、RPC起動時にはBotの初期化が終わっている必要あり&lt;br&gt;self._sell_lock # Sell operationを制限するセマフォのようなもの" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;arcSize=4;" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
+        <mxCell id="s_u__JOCzExAqWGaoaYu-0" value="Botクラスメンバ変数：&lt;br&gt;&lt;br&gt;self.state # Botの状態&lt;br&gt;self.config # Botの設定のDict&lt;br&gt;self._sell_rate_cache # 1800sec保持される sell rateのキャッシュ&lt;br&gt;self._buy_rate_cache # 1800sec保持される buy rateのキャッシュ&lt;br&gt;self.strategy # Trade strategyのインスタンス&lt;br&gt;self.exchange # 取引所との通信Bridge、おそらくシミュレーション、DryRunも含む。&lt;br&gt;&lt;br&gt;persistence # 継続中のTradeを記録するSQLDBと通信するインスタンス&lt;br&gt;&lt;br&gt;self.wallets # 通貨、使える額(free)、使った額(used)、全体(total)を保持&lt;br&gt;self.pairlists # Tradeの対象となる通貨ペアのList？&lt;br&gt;self.dataprovider # Botへのデータ入力を行う、Ticker, orderbook, OHLCYデータをFetchする&lt;br&gt;&lt;br&gt;self.edge #&amp;nbsp;Win Rate, Risk Reward Ratio, Expectancyを計算して、StoplossやPositionサイズの調整、Strategyへの情報提供？を行う。&lt;br&gt;self.active_pair_whitelist # pair_listは、静的、動的PairListがある。更新されたPairListがここに入れられる？&lt;br&gt;&lt;br&gt;self.rpc # RPCにてBotに司令を与えるために利用する、RPC起動時にはBotの初期化が終わっている必要あり&lt;br&gt;self._sell_lock # Sell operationを制限するセマフォのようなもの" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;arcSize=4;" parent="aCUefI5wwC0o2XipiXim-1" vertex="1">
           <mxGeometry x="1390" y="1135" width="800" height="410" as="geometry" />
         </mxCell>
-        <mxCell id="s_u__JOCzExAqWGaoaYu-1" value="Storategy関係：&lt;br&gt;&lt;br&gt;self.strategy # Trade strategyのインスタンス&lt;br&gt;&lt;br&gt;以下はStrategyのインスタンスに代入される&lt;br&gt;self.wallets # 通貨、使える額(free)、使った額(used)、全体(total)を保持&lt;br&gt;self.dataprovider # Botへのデータ入力を行う、Ticker, orderbook, OHLCYデータをFetchする&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;arcSize=4;" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
+        <mxCell id="s_u__JOCzExAqWGaoaYu-1" value="Storategy関係：&lt;br&gt;&lt;br&gt;self.strategy # Trade strategyのインスタンス&lt;br&gt;&lt;br&gt;以下はStrategyのインスタンスに代入される&lt;br&gt;self.wallets # 通貨、使える額(free)、使った額(used)、全体(total)を保持&lt;br&gt;self.dataprovider # Botへのデータ入力を行う、Ticker, orderbook, OHLCYデータをFetchする&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;arcSize=4;" parent="aCUefI5wwC0o2XipiXim-1" vertex="1">
           <mxGeometry x="1390" y="1640" width="530" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="s_u__JOCzExAqWGaoaYu-10" value="" style="shape=flexArrow;endArrow=classic;html=1;width=6.8965517241379315;endSize=5.427586206896552;" edge="1" parent="aCUefI5wwC0o2XipiXim-1">
+        <mxCell id="s_u__JOCzExAqWGaoaYu-10" value="" style="shape=flexArrow;endArrow=classic;html=1;width=6.8965517241379315;endSize=5.427586206896552;" parent="aCUefI5wwC0o2XipiXim-1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="2963" y="290" as="sourcePoint" />
             <mxPoint x="2960" y="1490" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="s_u__JOCzExAqWGaoaYu-11" value="iteration&lt;br&gt;process" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;fontSize=20;" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
+        <mxCell id="s_u__JOCzExAqWGaoaYu-11" value="iteration&lt;br&gt;process" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;fontSize=20;" parent="aCUefI5wwC0o2XipiXim-1" vertex="1">
           <mxGeometry x="2850" y="280" width="90" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="s_u__JOCzExAqWGaoaYu-25" value="Persistence&lt;br&gt;SQLight" style="shape=datastore;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
+        <mxCell id="s_u__JOCzExAqWGaoaYu-25" value="Persistence&lt;br&gt;SQLight" style="shape=datastore;whiteSpace=wrap;html=1;fontSize=20;" parent="aCUefI5wwC0o2XipiXim-1" vertex="1">
           <mxGeometry x="3780" y="970" width="140" height="115" as="geometry" />
         </mxCell>
-        <mxCell id="s_u__JOCzExAqWGaoaYu-26" value="Persistence：&lt;br&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;・トレードに関係する保持したい情報をSQLiteに保持、参照するためのクラス&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;・実装は&lt;/span&gt;&lt;span style=&quot;font-weight: 400&quot;&gt;sqlalchemyの使い方にかなり依存している。&lt;br&gt;・内部で利用するTradeクラスは、sqlalchemyのモデルクラスとして、DB内部の情報と同一なもの。&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;・TradeクラスはsqlalchemyでのTable定義くらすのベースクラス。SessionとかTradeクラスには定義されていないが、継承元に定義されている。&lt;br&gt;・Feeの計算など、現在起きているTradeについての計算が行われている。&lt;br&gt;・Tradeクラスを直接使うことも可能ぽい。&lt;br&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1;arcSize=3;" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
+        <mxCell id="s_u__JOCzExAqWGaoaYu-26" value="Persistence：&lt;br&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;・トレードに関係する保持したい情報をSQLiteに保持、参照するためのクラス&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;・実装は&lt;/span&gt;&lt;span style=&quot;font-weight: 400&quot;&gt;sqlalchemyの使い方にかなり依存している。&lt;br&gt;・内部で利用するTradeクラスは、sqlalchemyのモデルクラスとして、DB内部の情報と同一なもの。&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;・TradeクラスはsqlalchemyでのTable定義くらすのベースクラス。SessionとかTradeクラスには定義されていないが、継承元に定義されている。&lt;br&gt;・Feeの計算など、現在起きているTradeについての計算が行われている。&lt;br&gt;・Tradeクラスを直接使うことも可能ぽい。&lt;br&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1;arcSize=3;" parent="aCUefI5wwC0o2XipiXim-1" vertex="1">
           <mxGeometry x="1410" y="1870" width="530" height="150" as="geometry" />
         </mxCell>
-        <mxCell id="s_u__JOCzExAqWGaoaYu-27" value="Persistence::init：&lt;br&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;・DBセッションの生成&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;・DBにTradeで定義したTableを生成&lt;br&gt;・DryRunの場合、DB内のデータをすべてクリア&lt;br&gt;・DBのmigration、前回データのバックアップ？&lt;br&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1;arcSize=3;" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
+        <mxCell id="s_u__JOCzExAqWGaoaYu-27" value="Persistence::init：&lt;br&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;・DBセッションの生成&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;・DBにTradeで定義したTableを生成&lt;br&gt;・DryRunの場合、DB内のデータをすべてクリア&lt;br&gt;・DBのmigration、前回データのバックアップ？&lt;br&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1;arcSize=3;" parent="aCUefI5wwC0o2XipiXim-1" vertex="1">
           <mxGeometry x="1538" y="2030" width="530" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="s_u__JOCzExAqWGaoaYu-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=20;" edge="1" parent="aCUefI5wwC0o2XipiXim-1" source="s_u__JOCzExAqWGaoaYu-28" target="s_u__JOCzExAqWGaoaYu-32">
+        <mxCell id="s_u__JOCzExAqWGaoaYu-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=20;" parent="aCUefI5wwC0o2XipiXim-1" source="s_u__JOCzExAqWGaoaYu-28" target="s_u__JOCzExAqWGaoaYu-32" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="s_u__JOCzExAqWGaoaYu-28" value="Exchange：&lt;br&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;市場の情報を更新&lt;br&gt;CCXTのインターフェースを使って情報を更新&lt;br&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
+        <mxCell id="s_u__JOCzExAqWGaoaYu-28" value="Exchange：&lt;br&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;市場の情報を更新&lt;br&gt;CCXTのインターフェースを使って情報を更新&lt;br&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" parent="aCUefI5wwC0o2XipiXim-1" vertex="1">
           <mxGeometry x="3000" y="290" width="300" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="s_u__JOCzExAqWGaoaYu-30" value="Edge：&lt;br&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;・何者なのか？&lt;br&gt;・なにかの統計量を計算していそうだが。&lt;br&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1;arcSize=3;" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
+        <mxCell id="s_u__JOCzExAqWGaoaYu-30" value="Edge：&lt;br&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;・何者なのか？&lt;br&gt;・なにかの統計量を計算していそうだが。&lt;br&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1;arcSize=3;" parent="aCUefI5wwC0o2XipiXim-1" vertex="1">
           <mxGeometry x="1420" y="2160" width="530" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="s_u__JOCzExAqWGaoaYu-35" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=20;" edge="1" parent="aCUefI5wwC0o2XipiXim-1" source="s_u__JOCzExAqWGaoaYu-32" target="s_u__JOCzExAqWGaoaYu-34">
+        <mxCell id="s_u__JOCzExAqWGaoaYu-35" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=20;" parent="aCUefI5wwC0o2XipiXim-1" source="s_u__JOCzExAqWGaoaYu-32" target="s_u__JOCzExAqWGaoaYu-34" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="s_u__JOCzExAqWGaoaYu-63" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=20;" edge="1" parent="aCUefI5wwC0o2XipiXim-1" source="s_u__JOCzExAqWGaoaYu-32" target="s_u__JOCzExAqWGaoaYu-25">
+        <mxCell id="s_u__JOCzExAqWGaoaYu-63" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=20;" parent="aCUefI5wwC0o2XipiXim-1" source="s_u__JOCzExAqWGaoaYu-32" target="s_u__JOCzExAqWGaoaYu-25" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="s_u__JOCzExAqWGaoaYu-32" value="Persistence：&lt;br&gt;&lt;span style=&quot;font-weight: 400&quot;&gt;DBから開いているTradeを参照する&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
+        <mxCell id="s_u__JOCzExAqWGaoaYu-32" value="Persistence：&lt;br&gt;&lt;span style=&quot;font-weight: 400&quot;&gt;DBから開いているTradeを参照する&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" parent="aCUefI5wwC0o2XipiXim-1" vertex="1">
           <mxGeometry x="3000" y="370" width="300" height="45" as="geometry" />
         </mxCell>
-        <mxCell id="s_u__JOCzExAqWGaoaYu-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;fontSize=20;" edge="1" parent="aCUefI5wwC0o2XipiXim-1" source="s_u__JOCzExAqWGaoaYu-34" target="s_u__JOCzExAqWGaoaYu-36">
+        <mxCell id="s_u__JOCzExAqWGaoaYu-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;fontSize=20;" parent="aCUefI5wwC0o2XipiXim-1" source="s_u__JOCzExAqWGaoaYu-34" target="s_u__JOCzExAqWGaoaYu-36" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="s_u__JOCzExAqWGaoaYu-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=20;" edge="1" parent="aCUefI5wwC0o2XipiXim-1" source="s_u__JOCzExAqWGaoaYu-34" target="s_u__JOCzExAqWGaoaYu-44">
+        <mxCell id="s_u__JOCzExAqWGaoaYu-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=20;" parent="aCUefI5wwC0o2XipiXim-1" source="s_u__JOCzExAqWGaoaYu-34" target="s_u__JOCzExAqWGaoaYu-44" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="s_u__JOCzExAqWGaoaYu-49" value="Pair white list" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=20;" vertex="1" connectable="0" parent="s_u__JOCzExAqWGaoaYu-46">
+        <mxCell id="s_u__JOCzExAqWGaoaYu-49" value="Pair white list" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=20;" parent="s_u__JOCzExAqWGaoaYu-46" vertex="1" connectable="0">
           <mxGeometry x="-0.9316" relative="1" as="geometry">
             <mxPoint y="16" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="s_u__JOCzExAqWGaoaYu-34" value="PairList：&lt;br&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;ペアリストを更新&lt;br&gt;Edgeを更新&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
+        <mxCell id="s_u__JOCzExAqWGaoaYu-34" value="PairList：&lt;br&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;ペアリストを更新&lt;br&gt;Edgeを更新&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" parent="aCUefI5wwC0o2XipiXim-1" vertex="1">
           <mxGeometry x="3000" y="450" width="300" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="s_u__JOCzExAqWGaoaYu-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=20;" edge="1" parent="aCUefI5wwC0o2XipiXim-1" source="s_u__JOCzExAqWGaoaYu-36" target="s_u__JOCzExAqWGaoaYu-43">
+        <mxCell id="s_u__JOCzExAqWGaoaYu-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=20;" parent="aCUefI5wwC0o2XipiXim-1" source="s_u__JOCzExAqWGaoaYu-36" target="s_u__JOCzExAqWGaoaYu-43" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="s_u__JOCzExAqWGaoaYu-36" value="Dataprovider：&lt;br&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;統計情報など更新？&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
+        <mxCell id="s_u__JOCzExAqWGaoaYu-36" value="Dataprovider：&lt;br&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;統計情報など更新？&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" parent="aCUefI5wwC0o2XipiXim-1" vertex="1">
           <mxGeometry x="3210" y="650" width="300" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="s_u__JOCzExAqWGaoaYu-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;fontSize=20;" edge="1" parent="aCUefI5wwC0o2XipiXim-1" source="s_u__JOCzExAqWGaoaYu-38" target="s_u__JOCzExAqWGaoaYu-36">
+        <mxCell id="s_u__JOCzExAqWGaoaYu-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;fontSize=20;" parent="aCUefI5wwC0o2XipiXim-1" source="s_u__JOCzExAqWGaoaYu-38" target="s_u__JOCzExAqWGaoaYu-36" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="s_u__JOCzExAqWGaoaYu-38" value="Strategy config：&lt;br&gt;&lt;span style=&quot;font-weight: 400&quot;&gt;informative_pair&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
+        <mxCell id="s_u__JOCzExAqWGaoaYu-38" value="Strategy config：&lt;br&gt;&lt;span style=&quot;font-weight: 400&quot;&gt;informative_pair&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" parent="aCUefI5wwC0o2XipiXim-1" vertex="1">
           <mxGeometry x="3330" y="460" width="158" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="s_u__JOCzExAqWGaoaYu-40" value="Edge：&lt;br&gt;&lt;span style=&quot;font-weight: 400&quot;&gt;Edgeを更新&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
+        <mxCell id="s_u__JOCzExAqWGaoaYu-40" value="Edge：&lt;br&gt;&lt;span style=&quot;font-weight: 400&quot;&gt;Edgeを更新&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" parent="aCUefI5wwC0o2XipiXim-1" vertex="1">
           <mxGeometry x="3170" y="470" width="120" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="s_u__JOCzExAqWGaoaYu-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=20;" edge="1" parent="aCUefI5wwC0o2XipiXim-1" source="s_u__JOCzExAqWGaoaYu-43" target="s_u__JOCzExAqWGaoaYu-44">
+        <mxCell id="s_u__JOCzExAqWGaoaYu-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=20;" parent="aCUefI5wwC0o2XipiXim-1" source="s_u__JOCzExAqWGaoaYu-43" target="s_u__JOCzExAqWGaoaYu-44" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="s_u__JOCzExAqWGaoaYu-43" value="Strategy：&lt;br&gt;strategy::bot_loop_start" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
+        <mxCell id="s_u__JOCzExAqWGaoaYu-43" value="Strategy：&lt;br&gt;strategy::bot_loop_start" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" parent="aCUefI5wwC0o2XipiXim-1" vertex="1">
           <mxGeometry x="3210" y="750" width="300" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="s_u__JOCzExAqWGaoaYu-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=20;" edge="1" parent="aCUefI5wwC0o2XipiXim-1" source="s_u__JOCzExAqWGaoaYu-44" target="s_u__JOCzExAqWGaoaYu-51">
+        <mxCell id="s_u__JOCzExAqWGaoaYu-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=20;" parent="aCUefI5wwC0o2XipiXim-1" source="s_u__JOCzExAqWGaoaYu-44" target="s_u__JOCzExAqWGaoaYu-51" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="s_u__JOCzExAqWGaoaYu-44" value="Strategy：&lt;br&gt;strategy::analyze" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
+        <mxCell id="s_u__JOCzExAqWGaoaYu-44" value="Strategy：&lt;br&gt;strategy::analyze" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" parent="aCUefI5wwC0o2XipiXim-1" vertex="1">
           <mxGeometry x="3210" y="860" width="300" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="s_u__JOCzExAqWGaoaYu-50" value="Bot：&lt;br&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;OpenしているTradeのタイムアウ&lt;/span&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;トチェック&lt;br&gt;タイムアウトしていたらSellする&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-weight: 400&quot;&gt;self.check_handle_timedout()&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
+        <mxCell id="s_u__JOCzExAqWGaoaYu-50" value="Bot：&lt;br&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;OpenしているTradeのタイムアウ&lt;/span&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;トチェック&lt;br&gt;タイムアウトしていたらSellする&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-weight: 400&quot;&gt;self.check_handle_timedout()&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" parent="aCUefI5wwC0o2XipiXim-1" vertex="1">
           <mxGeometry x="3230" y="1030" width="300" height="65" as="geometry" />
         </mxCell>
-        <mxCell id="s_u__JOCzExAqWGaoaYu-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=20;" edge="1" parent="aCUefI5wwC0o2XipiXim-1" source="s_u__JOCzExAqWGaoaYu-52" target="s_u__JOCzExAqWGaoaYu-54">
+        <mxCell id="s_u__JOCzExAqWGaoaYu-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=20;" parent="aCUefI5wwC0o2XipiXim-1" source="s_u__JOCzExAqWGaoaYu-52" target="s_u__JOCzExAqWGaoaYu-54" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="s_u__JOCzExAqWGaoaYu-52" value="Sell lock" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1;arcSize=7;" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
+        <mxCell id="s_u__JOCzExAqWGaoaYu-52" value="Sell lock" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1;arcSize=7;" parent="aCUefI5wwC0o2XipiXim-1" vertex="1">
           <mxGeometry x="3170" y="1180" width="380" height="105" as="geometry" />
         </mxCell>
-        <mxCell id="s_u__JOCzExAqWGaoaYu-65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=20;" edge="1" parent="aCUefI5wwC0o2XipiXim-1" source="s_u__JOCzExAqWGaoaYu-53" target="s_u__JOCzExAqWGaoaYu-64">
+        <mxCell id="s_u__JOCzExAqWGaoaYu-65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=20;" parent="aCUefI5wwC0o2XipiXim-1" source="s_u__JOCzExAqWGaoaYu-53" target="s_u__JOCzExAqWGaoaYu-64" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="s_u__JOCzExAqWGaoaYu-53" value="Bot：&lt;br&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;OpenしているTradeについてSellできるものはSellする&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-weight: 400&quot;&gt;self.exit_positions(trades)&lt;br&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
+        <mxCell id="s_u__JOCzExAqWGaoaYu-53" value="Bot：&lt;br&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;OpenしているTradeについてSellできるものはSellする&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-weight: 400&quot;&gt;self.exit_positions(trades)&lt;br&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" parent="aCUefI5wwC0o2XipiXim-1" vertex="1">
           <mxGeometry x="3230" y="1215" width="300" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="s_u__JOCzExAqWGaoaYu-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=20;" edge="1" parent="aCUefI5wwC0o2XipiXim-1" source="s_u__JOCzExAqWGaoaYu-54" target="s_u__JOCzExAqWGaoaYu-55">
+        <mxCell id="s_u__JOCzExAqWGaoaYu-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=20;" parent="aCUefI5wwC0o2XipiXim-1" source="s_u__JOCzExAqWGaoaYu-54" target="s_u__JOCzExAqWGaoaYu-55" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="s_u__JOCzExAqWGaoaYu-54" value="Bot：&lt;br&gt;&lt;span style=&quot;font-weight: 400&quot;&gt;Tradeのスロットがあいていれば、TradeをOpenする&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-weight: 400&quot;&gt;self.enter_positions()&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
+        <mxCell id="s_u__JOCzExAqWGaoaYu-54" value="Bot：&lt;br&gt;&lt;span style=&quot;font-weight: 400&quot;&gt;Tradeのスロットがあいていれば、TradeをOpenする&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-weight: 400&quot;&gt;self.enter_positions()&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" parent="aCUefI5wwC0o2XipiXim-1" vertex="1">
           <mxGeometry x="3210" y="1310" width="300" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="s_u__JOCzExAqWGaoaYu-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=20;" edge="1" parent="aCUefI5wwC0o2XipiXim-1" source="s_u__JOCzExAqWGaoaYu-55" target="s_u__JOCzExAqWGaoaYu-25">
+        <mxCell id="s_u__JOCzExAqWGaoaYu-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=20;" parent="aCUefI5wwC0o2XipiXim-1" source="s_u__JOCzExAqWGaoaYu-55" target="s_u__JOCzExAqWGaoaYu-25" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="s_u__JOCzExAqWGaoaYu-55" value="Persistence：&lt;br&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;TradeクラスとDBを同期する&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-weight: 400&quot;&gt;Trade.session.flush()&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
+        <mxCell id="s_u__JOCzExAqWGaoaYu-55" value="Persistence：&lt;br&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;TradeクラスとDBを同期する&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-weight: 400&quot;&gt;Trade.session.flush()&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" parent="aCUefI5wwC0o2XipiXim-1" vertex="1">
           <mxGeometry x="3210" y="1410" width="300" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="s_u__JOCzExAqWGaoaYu-64" value="Wallets：&lt;br&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;Walletsを更新&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
+        <mxCell id="s_u__JOCzExAqWGaoaYu-64" value="Wallets：&lt;br&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;Walletsを更新&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" parent="aCUefI5wwC0o2XipiXim-1" vertex="1">
           <mxGeometry x="3610" y="1220" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="cPsLNTm4ZqAPRsQO--yS-1" value="My bot" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;fontSize=22;" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
+          <mxGeometry x="4210" y="225" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cPsLNTm4ZqAPRsQO--yS-2" value="Exchange：取引所との通信がメイン&lt;br&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;- 取引の時系列データフェッチ&lt;br&gt;- Buy, Sellオペレーションの実行&lt;br&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
+          <mxGeometry x="4730" y="740" width="300" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="cPsLNTm4ZqAPRsQO--yS-3" value="Persistence&lt;br&gt;OpenしたTradeを&lt;br&gt;保持するDB" style="shape=datastore;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
+          <mxGeometry x="5130" y="900" width="310" height="155" as="geometry" />
+        </mxCell>
+        <mxCell id="cPsLNTm4ZqAPRsQO--yS-4" value="Persistence：&lt;br&gt;&lt;span style=&quot;font-weight: 400&quot;&gt;DBから開いているTradeを参照する&lt;br&gt;DBがあるとシミュレーションが大変なので、&lt;br&gt;Onメモリタイプを用意したい&lt;br&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
+          <mxGeometry x="4730" y="920" width="330" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="cPsLNTm4ZqAPRsQO--yS-5" value="&lt;font&gt;やりたいこと：&lt;br&gt;&amp;nbsp;- optuna使ったパラメータチューニング&lt;br&gt;&amp;nbsp; &amp;nbsp;=&amp;gt; コンパクトなBot部分&lt;br&gt;&amp;nbsp; &amp;nbsp;=&amp;gt; 手数料を含む取引シミュレーション&lt;br&gt;&amp;nbsp; &amp;nbsp;=&amp;gt;&amp;nbsp;&lt;br&gt;&lt;/font&gt;" style="text;html=1;align=left;verticalAlign=top;resizable=0;points=[];autosize=1;fontSize=17;" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
+          <mxGeometry x="4400" y="140" width="330" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="cPsLNTm4ZqAPRsQO--yS-6" value="Wallet&lt;br&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;自分の保持する資金など誤差なく追跡する必要がある&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
+          <mxGeometry x="4740" y="1070" width="300" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="cPsLNTm4ZqAPRsQO--yS-9" value="Exchange：Binance&lt;span style=&quot;font-weight: normal&quot;&gt;&lt;br&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
+          <mxGeometry x="4781" y="795" width="300" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="cPsLNTm4ZqAPRsQO--yS-10" value="Exchange：Sim&lt;span style=&quot;font-weight: normal&quot;&gt;&lt;br&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
+          <mxGeometry x="4781" y="840" width="300" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="cPsLNTm4ZqAPRsQO--yS-11" value="Config&lt;br&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;取引する通貨ペア、&lt;br&gt;各種設定など&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
+          <mxGeometry x="4000" y="330" width="190" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="cPsLNTm4ZqAPRsQO--yS-12" value="Bot&lt;br&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1;arcSize=2;" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
+          <mxGeometry x="4240" y="490" width="420" height="620" as="geometry" />
+        </mxCell>
+        <mxCell id="cPsLNTm4ZqAPRsQO--yS-13" value="DataProvider&lt;br&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;ろうそくの計算&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-weight: 400&quot;&gt;標準的なテクニカル指標計算&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
+          <mxGeometry x="4355" y="540" width="190" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="cPsLNTm4ZqAPRsQO--yS-15" value="JudgeClose：&lt;span style=&quot;font-weight: normal&quot;&gt;&lt;br&gt;OpenしているTradeでSellするか、各通貨ペアごとに判断&lt;br&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
+          <mxGeometry x="4355" y="600" width="190" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="cPsLNTm4ZqAPRsQO--yS-16" value="JudgeOpen：&lt;span style=&quot;font-weight: normal&quot;&gt;&lt;br&gt;各通貨ペアごとにBuyするか判断&lt;br&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
+          <mxGeometry x="4355" y="660" width="190" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="cPsLNTm4ZqAPRsQO--yS-17" value="Preperration" style="whiteSpace=wrap;html=1;fontSize=17;" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
+          <mxGeometry x="4270" y="500" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cPsLNTm4ZqAPRsQO--yS-18" value="Operation" style="whiteSpace=wrap;html=1;fontSize=17;" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
+          <mxGeometry x="4270" y="720" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cPsLNTm4ZqAPRsQO--yS-19" value="ExternalOperation：&lt;span style=&quot;font-weight: normal&quot;&gt;&lt;br&gt;外部司令に基づいた、Open/Close&lt;br&gt;を実施&lt;br&gt;強制的に売る場合など。&lt;br&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
+          <mxGeometry x="4362" y="795" width="205" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="cPsLNTm4ZqAPRsQO--yS-20" value="SafeLimitOperation：&lt;span style=&quot;font-weight: normal&quot;&gt;&lt;br&gt;OpenしているTradeについて、&lt;br&gt;損失額などのしきい値を超えた場合、Sellする&lt;br&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
+          <mxGeometry x="4362" y="870" width="191" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="cPsLNTm4ZqAPRsQO--yS-21" value="TradingOperation：&lt;span style=&quot;font-weight: normal&quot;&gt;&lt;br&gt;Open/Closeの判断結果に基づいてBuy/Sellを実行する&lt;br&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
+          <mxGeometry x="4362" y="950.5" width="191" height="75" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
