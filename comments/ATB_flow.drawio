@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-09-29T15:08:58.566Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36" etag="KIl2MtrhxfSGVkKHwHe7" version="13.7.5" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2020-09-29T15:15:35.882Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36" etag="Lmka5ctrr4d6wEo8vikx" version="13.7.5" type="github" pages="2">
   <diagram id="s-LWDIpCwLAYnI88xC9E" name="Whole">
     <mxGraphModel dx="1099" dy="860" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -319,6 +319,12 @@
         </mxCell>
         <mxCell id="cPsLNTm4ZqAPRsQO--yS-21" value="TradingOperation：&lt;span style=&quot;font-weight: normal&quot;&gt;&lt;br&gt;Open/Closeの判断結果に基づいてBuy/Sellを実行する&lt;br&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
           <mxGeometry x="4362" y="950.5" width="191" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="cPsLNTm4ZqAPRsQO--yS-22" value="Logger&lt;br&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;- 取引結果などのMetrics&lt;br&gt;- Operationの実行ログなど保存&lt;br&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
+          <mxGeometry x="4720" y="480" width="300" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="cPsLNTm4ZqAPRsQO--yS-23" value="Viewer&lt;br&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;できれば独立して存在したい（スレッドが別など）&lt;br&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
+          <mxGeometry x="4720" y="550" width="300" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
