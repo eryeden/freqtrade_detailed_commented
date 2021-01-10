@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-01-09T07:42:43.727Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="tLPV9uib_rJzfu9Dmb7_" version="14.1.8" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2021-01-10T03:07:44.484Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="v6xhj-DazjYhOe4MoTyi" version="14.1.8" type="github" pages="2">
   <diagram id="s-LWDIpCwLAYnI88xC9E" name="Whole">
     <mxGraphModel dx="1436" dy="945" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -35,7 +35,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="uRmwWOH_s3Uu9mqFdXmV" name="Freqtrade">
-    <mxGraphModel dx="3932" dy="2105" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="6684" dy="3578" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="aCUefI5wwC0o2XipiXim-0" />
         <mxCell id="aCUefI5wwC0o2XipiXim-1" parent="aCUefI5wwC0o2XipiXim-0" />
@@ -43,7 +43,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="j8EkzfEECUyLF87ecORh-86" value="Bot execution module" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1;arcSize=2;" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
-          <mxGeometry x="6470" y="1560" width="690" height="550" as="geometry" />
+          <mxGeometry x="6470" y="1560" width="690" height="400" as="geometry" />
         </mxCell>
         <mxCell id="s_u__JOCzExAqWGaoaYu-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=20;" parent="aCUefI5wwC0o2XipiXim-1" source="s_u__JOCzExAqWGaoaYu-51" target="s_u__JOCzExAqWGaoaYu-52" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -596,29 +596,23 @@
           <mxGeometry x="6060" y="1445" width="50" height="45" as="geometry" />
         </mxCell>
         <mxCell id="j8EkzfEECUyLF87ecORh-72" value="Bot function" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1;arcSize=2;" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
-          <mxGeometry x="6750" y="1620" width="290" height="440" as="geometry" />
-        </mxCell>
-        <mxCell id="j8EkzfEECUyLF87ecORh-73" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="aCUefI5wwC0o2XipiXim-1" source="j8EkzfEECUyLF87ecORh-74" target="j8EkzfEECUyLF87ecORh-76">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="j8EkzfEECUyLF87ecORh-74" value="Preprocessing&lt;br&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;ろうそくの計算&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-weight: 400&quot;&gt;標準的なテクニカル指標計算&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
-          <mxGeometry x="6800.5" y="1707.5" width="190" height="50" as="geometry" />
+          <mxGeometry x="6750" y="1620" width="290" height="310" as="geometry" />
         </mxCell>
         <mxCell id="j8EkzfEECUyLF87ecORh-75" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="aCUefI5wwC0o2XipiXim-1" source="j8EkzfEECUyLF87ecORh-76" target="j8EkzfEECUyLF87ecORh-77">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="j8EkzfEECUyLF87ecORh-76" value="JudgeClose：&lt;span style=&quot;font-weight: normal&quot;&gt;&lt;br&gt;OpenしているTradeでSellするか、各通貨ペアごとに判断&lt;br&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
-          <mxGeometry x="6800.5" y="1796.5" width="190" height="50" as="geometry" />
+          <mxGeometry x="6795" y="1667" width="190" height="50" as="geometry" />
         </mxCell>
         <mxCell id="j8EkzfEECUyLF87ecORh-77" value="JudgeOpen：&lt;span style=&quot;font-weight: normal&quot;&gt;&lt;br&gt;各通貨ペアごとにBuyするか判断&lt;br&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
-          <mxGeometry x="6800.5" y="1885.5" width="190" height="50" as="geometry" />
+          <mxGeometry x="6795" y="1756" width="190" height="50" as="geometry" />
         </mxCell>
         <mxCell id="j8EkzfEECUyLF87ecORh-78" value="SafeLimitOperation：&lt;span style=&quot;font-weight: normal&quot;&gt;&lt;br&gt;OpenしているTradeについて、&lt;br&gt;損失額などのしきい値を超えた場合、Sellする&lt;br&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
-          <mxGeometry x="6800" y="1967.5" width="191" height="75" as="geometry" />
+          <mxGeometry x="6794.5" y="1838" width="191" height="75" as="geometry" />
         </mxCell>
         <mxCell id="j8EkzfEECUyLF87ecORh-79" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="aCUefI5wwC0o2XipiXim-1" source="j8EkzfEECUyLF87ecORh-77" target="j8EkzfEECUyLF87ecORh-78">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="6895.5" y="2032.5" as="sourcePoint" />
+            <mxPoint x="6890" y="1903" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="j8EkzfEECUyLF87ecORh-113" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.457;entryY=0.011;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="aCUefI5wwC0o2XipiXim-1" source="j8EkzfEECUyLF87ecORh-80" target="j8EkzfEECUyLF87ecORh-81">
@@ -628,19 +622,22 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="j8EkzfEECUyLF87ecORh-80" value="&lt;b&gt;Open or Close&lt;/b&gt;&lt;br&gt;通貨ごとにOpenするかCloseするかのデータ" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
-          <mxGeometry x="6737.75" y="2160" width="174.5" height="72" as="geometry" />
+          <mxGeometry x="6727.75" y="2039" width="174.5" height="72" as="geometry" />
         </mxCell>
-        <mxCell id="j8EkzfEECUyLF87ecORh-115" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.463;entryY=0.028;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="aCUefI5wwC0o2XipiXim-1" source="j8EkzfEECUyLF87ecORh-81" target="j8EkzfEECUyLF87ecORh-98">
+        <mxCell id="j8EkzfEECUyLF87ecORh-115" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0;entryDx=72.25;entryDy=0;entryPerimeter=0;" edge="1" parent="aCUefI5wwC0o2XipiXim-1" source="j8EkzfEECUyLF87ecORh-81" target="j8EkzfEECUyLF87ecORh-98">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="j8EkzfEECUyLF87ecORh-117" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="aCUefI5wwC0o2XipiXim-1" source="j8EkzfEECUyLF87ecORh-81" target="j8EkzfEECUyLF87ecORh-99">
+        <mxCell id="j8EkzfEECUyLF87ecORh-117" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=72.25;entryDy=0;entryPerimeter=0;" edge="1" parent="aCUefI5wwC0o2XipiXim-1" source="j8EkzfEECUyLF87ecORh-81" target="j8EkzfEECUyLF87ecORh-99">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="j8EkzfEECUyLF87ecORh-127" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0;entryDx=72.25;entryDy=0;entryPerimeter=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="aCUefI5wwC0o2XipiXim-1" source="j8EkzfEECUyLF87ecORh-81" target="j8EkzfEECUyLF87ecORh-126">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="j8EkzfEECUyLF87ecORh-81" value="Trading execution module (Realtime)：&lt;span style=&quot;font-weight: normal&quot;&gt;&lt;br&gt;Open/Closeの判断結果に基づいてBuy/Sellを実行する&lt;br&gt;&lt;br&gt;Buy：使える金額の分だけOpenする通貨を買う&lt;br&gt;・PersistanceにOpenしたTradeを登録する&lt;br&gt;・Saifuには現在保持している通貨量で更新する&lt;br&gt;・取引所のAPIを発行&lt;br&gt;&lt;br&gt;Sell：OpenしているTradeの保持分の通貨を売る&lt;br&gt;・OpenしたTradeをPersistanceから削除する&lt;br&gt;・Saifuには現在保持している通貨量で更新する&lt;br&gt;・取引所のAPI発行&lt;br&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1;arcSize=3;" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
           <mxGeometry x="6536.38" y="2290" width="310" height="190" as="geometry" />
         </mxCell>
         <mxCell id="j8EkzfEECUyLF87ecORh-85" value="ExternalOperation：&lt;span style=&quot;font-weight: normal&quot;&gt;&lt;br&gt;外部司令に基づいた、Open/Close&lt;br&gt;を実施&lt;br&gt;強制的に売る場合など。&lt;br&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
-          <mxGeometry x="6490" y="1788.5" width="205" height="65" as="geometry" />
+          <mxGeometry x="6496.13" y="1796.5" width="205" height="65" as="geometry" />
         </mxCell>
         <mxCell id="j8EkzfEECUyLF87ecORh-103" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.112;entryY=-0.002;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="aCUefI5wwC0o2XipiXim-1" source="j8EkzfEECUyLF87ecORh-87" target="j8EkzfEECUyLF87ecORh-86">
           <mxGeometry relative="1" as="geometry" />
@@ -648,11 +645,11 @@
         <mxCell id="j8EkzfEECUyLF87ecORh-87" value="&lt;b&gt;External command&lt;/b&gt;&lt;br&gt;外部コマンドによるOpen or Close" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
           <mxGeometry x="6435.5" y="1418" width="174.5" height="72" as="geometry" />
         </mxCell>
-        <mxCell id="j8EkzfEECUyLF87ecORh-104" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.351;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="aCUefI5wwC0o2XipiXim-1" source="j8EkzfEECUyLF87ecORh-89" target="j8EkzfEECUyLF87ecORh-86">
+        <mxCell id="j8EkzfEECUyLF87ecORh-124" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="aCUefI5wwC0o2XipiXim-1" source="j8EkzfEECUyLF87ecORh-89" target="j8EkzfEECUyLF87ecORh-123">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="j8EkzfEECUyLF87ecORh-89" value="&lt;b&gt;Time seriese&lt;/b&gt;&lt;br&gt;対象にしている通貨ペアの時系列データ" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
-          <mxGeometry x="6670" y="1418" width="174.5" height="72" as="geometry" />
+          <mxGeometry x="6703.75" y="1330" width="174.5" height="72" as="geometry" />
         </mxCell>
         <mxCell id="j8EkzfEECUyLF87ecORh-105" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.81;entryY=0.004;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="aCUefI5wwC0o2XipiXim-1" source="j8EkzfEECUyLF87ecORh-90" target="j8EkzfEECUyLF87ecORh-86">
           <mxGeometry relative="1" as="geometry" />
@@ -672,14 +669,14 @@
         <mxCell id="j8EkzfEECUyLF87ecORh-92" value="External command module:" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
           <mxGeometry x="6310" y="1355" width="200" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="j8EkzfEECUyLF87ecORh-111" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="aCUefI5wwC0o2XipiXim-1" source="j8EkzfEECUyLF87ecORh-93" target="j8EkzfEECUyLF87ecORh-89">
+        <mxCell id="j8EkzfEECUyLF87ecORh-111" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="aCUefI5wwC0o2XipiXim-1" source="j8EkzfEECUyLF87ecORh-93" target="j8EkzfEECUyLF87ecORh-89">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="j8EkzfEECUyLF87ecORh-93" value="Data provider module(Realtime):" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
           <mxGeometry x="6483.88" y="1195" width="217.25" height="50" as="geometry" />
         </mxCell>
         <mxCell id="j8EkzfEECUyLF87ecORh-95" value="Persistance module:&lt;br&gt;Persistance DBと同期する" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
-          <mxGeometry x="6960" y="2680" width="200" height="50" as="geometry" />
+          <mxGeometry x="7010" y="2810" width="200" height="50" as="geometry" />
         </mxCell>
         <mxCell id="j8EkzfEECUyLF87ecORh-116" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="aCUefI5wwC0o2XipiXim-1" source="j8EkzfEECUyLF87ecORh-97" target="j8EkzfEECUyLF87ecORh-98">
           <mxGeometry relative="1" as="geometry" />
@@ -687,17 +684,20 @@
         <mxCell id="j8EkzfEECUyLF87ecORh-118" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="aCUefI5wwC0o2XipiXim-1" source="j8EkzfEECUyLF87ecORh-97" target="j8EkzfEECUyLF87ecORh-99">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="j8EkzfEECUyLF87ecORh-128" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="aCUefI5wwC0o2XipiXim-1" source="j8EkzfEECUyLF87ecORh-97" target="j8EkzfEECUyLF87ecORh-126">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="j8EkzfEECUyLF87ecORh-97" value="Trading execution module (Backtest)：&lt;span style=&quot;font-weight: normal&quot;&gt;&lt;br&gt;Open/Closeの判断結果に基づいてBuy/Sellを実行する&lt;br&gt;&lt;br&gt;Buy：使える金額の分だけOpenする通貨を買う&lt;br&gt;・PersistanceにOpenしたTradeを登録する&lt;br&gt;・Saifuには現在保持している通貨量で更新する&lt;br&gt;&lt;br&gt;Sell：OpenしているTradeの保持分の通貨を売る&lt;br&gt;・OpenしたTradeをPersistanceから削除する&lt;br&gt;・Saifuには現在保持している通貨量で更新する&lt;br&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1;arcSize=3;" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
           <mxGeometry x="6900" y="2290" width="310" height="190" as="geometry" />
         </mxCell>
         <mxCell id="j8EkzfEECUyLF87ecORh-98" value="&lt;b&gt;Saifu&lt;br&gt;&lt;/b&gt;保持している通貨量" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
-          <mxGeometry x="6683.25" y="2530" width="174.5" height="72" as="geometry" />
+          <mxGeometry x="6733.25" y="2660" width="174.5" height="72" as="geometry" />
         </mxCell>
         <mxCell id="j8EkzfEECUyLF87ecORh-120" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="aCUefI5wwC0o2XipiXim-1" source="j8EkzfEECUyLF87ecORh-99" target="j8EkzfEECUyLF87ecORh-95">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="j8EkzfEECUyLF87ecORh-99" value="&lt;b&gt;Persistence&lt;br&gt;&lt;/b&gt;OpenしているTradeを保持しているデータ" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
-          <mxGeometry x="6878.25" y="2530" width="174.5" height="72" as="geometry" />
+          <mxGeometry x="6928.25" y="2660" width="174.5" height="72" as="geometry" />
         </mxCell>
         <mxCell id="j8EkzfEECUyLF87ecORh-110" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0;entryDx=72.25;entryDy=0;entryPerimeter=0;" edge="1" parent="aCUefI5wwC0o2XipiXim-1" source="j8EkzfEECUyLF87ecORh-100" target="j8EkzfEECUyLF87ecORh-89">
           <mxGeometry relative="1" as="geometry" />
@@ -710,6 +710,18 @@
         </mxCell>
         <mxCell id="j8EkzfEECUyLF87ecORh-102" value="Persistance module:&lt;br&gt;Persistance DBと同期する" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
           <mxGeometry x="7250" y="1315" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="j8EkzfEECUyLF87ecORh-121" value="問題：&lt;br&gt;- Viewer : ひとまず実験にはMatplotlib、UIなど必要になったらH2Owaveを使ってみる。&lt;br&gt;- 結果のログ : pythonの標準ロガーを利用" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
+          <mxGeometry x="7220" y="1657" width="320" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="j8EkzfEECUyLF87ecORh-125" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.538;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="aCUefI5wwC0o2XipiXim-1" source="j8EkzfEECUyLF87ecORh-123" target="j8EkzfEECUyLF87ecORh-86">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="j8EkzfEECUyLF87ecORh-123" value="Preprocessing&lt;br&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;Botのロジックで共通して利用する指標については計算して、結果を保存しておく。&lt;br&gt;ろうそくの計算&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-weight: 400&quot;&gt;標準的なテクニカル指標計算&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fontStyle=1" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
+          <mxGeometry x="6683.25" y="1440" width="250" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="j8EkzfEECUyLF87ecORh-126" value="&lt;b&gt;Statistics&lt;br&gt;&lt;/b&gt;利益などの統計データを記録する" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" vertex="1" parent="aCUefI5wwC0o2XipiXim-1">
+          <mxGeometry x="6520" y="2660" width="194.5" height="72" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
